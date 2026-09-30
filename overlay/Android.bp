@@ -13,7 +13,6 @@ phony {
 phony {
     name: "MotoEuicc",
     required: [
-        "EuiccPolicy",
         "EuiccPolicyMoto",
     ]
 }
