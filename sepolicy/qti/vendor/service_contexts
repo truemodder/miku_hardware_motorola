@@ -7,3 +7,6 @@ com.motorola.hardware.biometric.fingerprint.IMotoFingerPrint/default    u:object
 
 # Sensors
 motorola.hardware.sensors.ISensorExt/default    u:object_r:hal_sensorext_service:s0
+
+# PowerShare
+vendor.lineage.powershare.IPowerShare/default    u:object_r:hal_lineage_powershare_service:s0
