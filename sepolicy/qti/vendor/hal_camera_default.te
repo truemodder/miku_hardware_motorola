@@ -12,7 +12,8 @@ rw_dir_file(hal_camera_default, vendor_camera_data_file)
 
 r_dir_file(hal_camera_default, vendor_sysfs_battery_supply)
 r_dir_file(hal_camera_default, vendor_sysfs_devicetree_mmi)
-rw_dir_file(hal_camera_default, vendor_sysfs_input)
+r_dir_file(hal_camera_default, vendor_sysfs_input)
+allow hal_camera_default vendor_sysfs_input:file rw_file_perms;
 
 allow hal_camera_default vendor_imager_metadata_file:dir rw_dir_perms;
 allow hal_camera_default vendor_imager_metadata_file:file create_file_perms;

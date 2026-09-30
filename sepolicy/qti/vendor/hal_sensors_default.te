@@ -1,9 +1,17 @@
-rw_dir_file(hal_sensors_default, vendor_sysfs_capsense)
-rw_dir_file(hal_sensors_default, vendor_sysfs_graphics)
-rw_dir_file(hal_sensors_default, vendor_sysfs_input)
-rw_dir_file(hal_sensors_default, vendor_sysfs_touchpanel)
+r_dir_file(hal_sensors_default, vendor_sysfs_capsense)
+allow hal_sensors_default vendor_sysfs_capsense:file rw_file_perms;
 
-rw_dir_file(hal_sensors_default, vendor_sysfs_laser)
+r_dir_file(hal_sensors_default, vendor_sysfs_graphics)
+allow hal_sensors_default vendor_sysfs_graphics:file rw_file_perms;
+
+r_dir_file(hal_sensors_default, vendor_sysfs_input)
+allow hal_sensors_default vendor_sysfs_input:file rw_file_perms;
+
+r_dir_file(hal_sensors_default, vendor_sysfs_touchpanel)
+allow hal_sensors_default vendor_sysfs_touchpanel:file rw_file_perms;
+
+r_dir_file(hal_sensors_default, vendor_sysfs_laser)
+allow hal_sensors_default vendor_sysfs_laser:file rw_file_perms;
 allow hal_sensors_default vendor_sysfs_laser:file setattr;
 
 allow hal_sensors_default self:binder call;

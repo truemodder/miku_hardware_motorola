@@ -9,5 +9,6 @@ allow capsense_reset self:netlink_kobject_uevent_socket create_socket_perms_no_i
 allow capsense_reset input_device:dir r_dir_perms;
 allow capsense_reset input_device:chr_file r_file_perms;
 
-rw_dir_file(capsense_reset, vendor_sysfs_capsense)
+r_dir_file(capsense_reset, vendor_sysfs_capsense)
+allow capsense_reset vendor_sysfs_capsense:file rw_file_perms;
 r_dir_file(capsense_reset, vendor_sysfs_usb_supply)
